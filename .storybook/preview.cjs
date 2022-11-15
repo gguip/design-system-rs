@@ -9,12 +9,11 @@ if (location.hostname === "gguip.github.io") {
     serviceWorker: {
       url: "/design-system-rs/mockServiceWorker.js",
     },
+    onUnhandledRequest: "bypass",
   };
 }
 
-initialize(options, {
-  onUnhandledRequest: "bypass",
-});
+initialize(options);
 
 export const decorators = [mswDecorator];
 
